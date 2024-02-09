@@ -1,0 +1,70 @@
+.container {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  width: 400px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
+  z-index: 7;
+  /* z-index: 12; */
+  overflow: hidden;
+}
+
+.msgContent {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.indicatorDiv {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.indicatorIcon {
+  width: 100%;
+}
+
+.message {
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.timeBar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background-color: #ff4500;
+  scale: 1 1;
+  transform-origin: left;
+  animation: timeBar 3s linear infinite;
+}
+
+@keyframes timeBar {
+  to {
+    scale: 0 1;
+  }
+}
+
+@media screen and (width < 450px) {
+  .container {
+    width: 95%;
+    left: 2.5%;
+  }
+  .message {
+    font-size: 0.75rem;
+  }
+}
