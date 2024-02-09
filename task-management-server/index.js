@@ -108,7 +108,7 @@ app.get("/signup", handleUserSignUp, (req, res) => {
 
 app.get("/logout", checkUserLogin, (req, res) => {
   req.username = null;
-  res.cookie("jwt", "", { path: "/", sameSite: "lax", secure: true });
+  res.cookie("jwt", "", { path: "/", sameSite: "none", secure: true });
   res.json({ loggedOut: true });
 });
 
