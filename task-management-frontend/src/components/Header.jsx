@@ -2,6 +2,7 @@ import styles from "./css/header.module.css";
 
 import { useDispatch } from "react-redux";
 import { fetchLoginStatus } from "./redux/reducers/loginCheckPage";
+import { showPopUp } from "./PopUpMessage";
 
 // import searchIcon from "../assets/images/search.png";
 
@@ -17,8 +18,14 @@ function Header() {
 
     const result = await res.json();
 
+    let message = "Unable to Log Out. Try again.";
+
     if (result.loggedOut) {
       dispatch(fetchLoginStatus());
+      message = "User Logged Out.";
+      showPopUp({ success: true, message: message });
+    } else {
+      showPopUp({ success: false, message: message });
     }
   };
 

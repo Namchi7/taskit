@@ -50,7 +50,7 @@
   background-color: #ff4500;
   scale: 1 1;
   transform-origin: left;
-  animation: timeBar 3s linear infinite;
+  animation: timeBar 3s linear;
 }
 
 @keyframes timeBar {
