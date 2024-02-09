@@ -15,13 +15,15 @@ function Login() {
   const unameRef = useRef();
   const passRef = useRef();
 
+  const serverUrl = process.env.REACT_APP_SERVER_URL;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const uname = unameRef.current.value;
     const pass = passRef.current.value;
 
     const res = await fetch(
-      `http://localhost:3500/login?uname=${uname}&password=${pass}`,
+      `${serverUrl}/login?uname=${uname}&password=${pass}`,
       { method: "GET", credentials: "include" }
     );
 
