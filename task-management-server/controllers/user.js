@@ -35,7 +35,7 @@ export const handleUserLogin = async (req, res, next) => {
         res.json({ error: "Server error", loggedIn: false });
       } else if (result) {
         const token = setUserAuth(user[0]);
-        res.cookie("jwt", token, { path: "/", sameSite: "lax", secure: true });
+        res.cookie("jwt", token, { path: "/", sameSite: "none", secure: true });
         next();
       } else {
         console.log("pass nhi match ho rha");
