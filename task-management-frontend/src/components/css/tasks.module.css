@@ -1,7 +1,7 @@
 .container {
   width: 100%;
   /* max-width: 1200px; */
-  height: calc(100svh - 65px);
+  height: calc(100vh - 65px);
   height: max-content;
   flex-grow: 1;
   display: flex;
