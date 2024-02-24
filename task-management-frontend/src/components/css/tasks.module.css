@@ -429,7 +429,7 @@ legend {
 
 .placeholderDiv {
   display: none;
-  height: 50px;
+  height: 100px;
   width: 100%;
   opacity: 0;
 }
