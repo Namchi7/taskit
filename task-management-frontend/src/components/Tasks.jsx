@@ -356,6 +356,8 @@ function Tasks() {
               </div>
             </div>
           ))}
+
+          <div className={styles.placeholderDiv}></div>
       </div>
 
       {/* <div className={styles.editModal} data-edit-modal> */}

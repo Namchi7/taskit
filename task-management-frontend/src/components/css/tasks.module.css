@@ -427,6 +427,13 @@ legend {
   }
 }
 
+.placeholderDiv {
+  display: none;
+  height: 50px;
+  width: 100%;
+  opacity: 0;
+}
+
 @media screen and (width < 650px) {
   .container {
     /* height: 100%; */
@@ -434,6 +441,9 @@ legend {
     justify-content: flex-start;
     align-items: center;
     padding-bottom: 2rem;
+  }
+  .placeholderDiv {
+    display: block;
   }
   .tasksContainer {
     width: 100%;
