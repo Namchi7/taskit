@@ -433,6 +433,7 @@ legend {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    padding-bottom: 2rem;
   }
   .tasksContainer {
     width: 100%;
